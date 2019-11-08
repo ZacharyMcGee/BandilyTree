@@ -1,6 +1,6 @@
 <?php
-$key = 'buGfNhMTMtHMGmkyAyRt';
-$secret = 'DHIXkPjCSdyLcfPNsHlzWjNOqrwmyiyU';
+include 'keys.php';
+
 $artist = 1;
 
 if (isset($_GET['artist']))
