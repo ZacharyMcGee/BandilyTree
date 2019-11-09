@@ -213,11 +213,11 @@ function BuildTree() {
       height: '100%',
       width: '100%',
       nodes: {
-        borderWidth: 1,
+        borderWidth: 2,
         size: 30,
         color: {
-          border: "#406897",
-          background: "#6AAFFF"
+          border: "#3d8863",
+          background: "#3d8863"
         },
         font: { color: "#444d56" },
         shapeProperties: {
@@ -225,8 +225,9 @@ function BuildTree() {
         }
       },
       edges: {
+        width: 2,
         color: {
-          color: '#CCC',
+          color: '#bdf5d9',
           highlight: '#A22'
         },
       },
