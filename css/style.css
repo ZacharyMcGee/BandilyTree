@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+  margin: 0px;
+}
+
+.header {
+  height: 60px;
+}
+
+.search-artist {
+  min-height: 500px;
+  background: rgb(122,242,183);
+  background: linear-gradient(90deg, rgba(122,242,183,1) 0%, rgba(73,217,186,1) 100%);
+  width: 100%;
+}
+
+.search-form {
+  margin: auto;
+  padding-top: 200px;
+  width: 400px;
+}
+
+.artist-search-text {
+  margin: auto;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #26a084;
+  padding-left: 35px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.artist-search-input {
+  display: inline-block;
+  float: left;
+  width: Calc(100% - 80px);
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  margin: 0;
+  padding: 5px 10px;
+  color: #b4d6ce;
+  font-size: 1.6rem;
+  font-weight: inherit;
+  line-height: .4;
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow 300ms;
+}
+
+::placeholder {
+  color: #dbece8;
+}
+
+.artist-search-input:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem #38b197;
+}
+
+.artist-search-button {
+  display: inline-block;
+}
+
 .artist-tree {
-  width: 600px;
-  height: 400px;
+  background: rgb(122,242,183);
+  background: linear-gradient(90deg, rgba(122,242,183,1) 0%, rgba(73,217,186,1) 100%);
+  width: 100%;
+  height: 500px;
   border: 1px solid lightgray;
 }
