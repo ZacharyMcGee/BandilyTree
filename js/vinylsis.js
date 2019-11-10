@@ -2,29 +2,32 @@ var results = [];
 var nodes = [];
 var edges = [];
 
-$(document).ready(function() {
-    $("#filter").click(function(){
-        //GetArtistID($('#artist').val());
-        GetArtistInfo(125246, 0, 1, 0);
-    });
+$(function(){
+      particlesJS("search-artist", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":4,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var update; update = function() {  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { } 				requestAnimationFrame(update); };
+ 	requestAnimationFrame(update);
 });
 
-function GetArtistID(artist) {
-  $.ajax({
-      type: "GET",
-      url: 'functions/search-artists.php',
-      data: {
-        "artist":  artist,
-      },
-      success: function(data) {
-        var jsonData = JSON.parse(data);
-        console.log(jsonData);
-      },
-      error: function(result) {
-          alert('error');
-      }
-  });
-}
+$(document).ready(function() {
+    $("#artist-search-button").click(function(){
+      var artist = $('#artist-search-input').val();
+        //GetArtistID($('#artist').val());
+        $.ajax({
+            type: "GET",
+            url: 'functions/search-artists.php',
+            data: {
+              "artist": artist,
+            },
+            success: function(data) {
+              var jsonData = JSON.parse(data);
+
+              GetArtistInfo(jsonData.results[0]["id"], 0, 1, 0);
+            },
+            error: function(result) {
+                alert('error');
+            }
+        });
+    });
+});
 
 function ExpandArtist(id, parent, network) {
   $.ajax({
