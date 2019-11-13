@@ -13,7 +13,48 @@ html, body {
 }
 
 .header-logo {
+  height: 60px;
+  width: 50%;
+  display: inline-block;
+}
+
+.header-logo img {
   padding-top: 13px;
+  padding-left: 20px;
+}
+
+.header-menu {
+  float: right;
+  height: 60px;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #49d9ba;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #49d9ba;
+  font-weight: bold;
+}
+
+.header-menu a:hover {
+  color: #7af2b7;
+}
+
+.header-menu ul {
+  margin-top: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header-menu li {
+  padding-left: 40px;
+  display: inline;
+}
+
+.content {
+  border-top: 1px solid #f3f3f3;
 }
 
 .search-artist {
@@ -23,7 +64,16 @@ html, body {
   width: 100%;
 }
 
+.vis-active:focus {
+    outline: none;
+}
+
+.vis-network {
+  outline: none;
+}
+
 .particles-js-canvas-el {
+  outline: none;
   height: 500px !important;
 }
 
@@ -108,12 +158,34 @@ html, body {
 
 .info-section {
   width: 100%;
+  margin-top: 40px;
+  margin-bottom: 80px;
   font-family: 'Open Sans', sans-serif;
   color: #33b194;
 }
 
+.info-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .info-header {
   text-align: center;
+}
+
+.info-header {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.info-panel-body {
+
+}
+
+.info-panel-body {
+  margin-bottom: 10px !important;
+  color: #b9b9b9;
+  font-size: 12px;
 }
 
 .info-panels {
@@ -127,7 +199,7 @@ html, body {
 .info-panel-1 {
   background-color: #f7f7f7;
   position: relative;
-  width: calc(30% - 40px);
+  width: calc(32% - 40px);
   margin-left: 20px;
   margin-right: 20px;
   display: inline-block;
@@ -145,7 +217,7 @@ max-height:100%;
 .info-panel-2 {
   background-color: #f7f7f7;
   position: relative;
-  width: calc(30% - 40px);
+  width: calc(32% - 40px);
   margin-left: 20px;
   margin-right: 20px;
   display: inline-block;
@@ -163,7 +235,7 @@ max-height:100%;
 .info-panel-3 {
   background-color: #f7f7f7;
   position: relative;
-  width: calc(30% - 40px);
+  width: calc(32% - 40px);
   margin-left: 20px;
   margin-right: 20px;
   display: inline-block;
@@ -176,6 +248,39 @@ max-height:100%;
 .info-panel-3 img {
   max-width:100%;
   max-height:100%;
+}
+
+.footer {
+  height: 60px;
+  background: rgb(122,242,183);
+  background: linear-gradient(90deg, rgba(122,242,183,1) 0%, rgba(73,217,186,1) 100%);
+}
+
+.footer p {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.footer a {
+  color: #26a084;
+  text-decoration: none;
+}
+
+.footer a:visited {
+  color: #26a084;
+  text-decoration: none;
+}
+
+.footer a:link {
+  color: #26a084;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .lds-roller {
