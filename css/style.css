@@ -77,6 +77,38 @@ html, body {
   height: 500px !important;
 }
 
+div#cellBatchAttrPopUp {
+  font-family: 'Open Sans', sans-serif;
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 492px;
+  z-index: 2000;
+  color: #333;
+  white-space: nowrap;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  background-color: #fff;
+  color: #000;
+}
+
+.pop-up-title {
+  font-size: 12px;
+  color: #26a084;
+  border-bottom: 1px solid #eaeaea;
+  padding: 8px;
+}
+
+.close-pop-up {
+  display: inline-block;
+  float: right;
+  color: #26a084;
+}
+
+.close-pop-up:hover {
+  color: #156956;
+}
+
 .search-form {
   margin-left: Calc(50% - 210px);
   margin-top: 170px;
