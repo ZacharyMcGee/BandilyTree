@@ -82,7 +82,7 @@ div#cellBatchAttrPopUp {
   display: none;
   position: absolute;
   width: 200px;
-  height: 492px;
+  height: 500px;
   z-index: 2000;
   color: #333;
   white-space: nowrap;
@@ -97,6 +97,50 @@ div#cellBatchAttrPopUp {
   color: #26a084;
   border-bottom: 1px solid #eaeaea;
   padding: 8px;
+}
+
+.pop-up-title .fas {
+  margin-right: 5px;
+}
+
+.pop-up-profile-image {
+  position: relative;
+  width: 100px;
+  margin-left: 48px;
+  margin-top: 10px;
+}
+
+.pop-up-profile-image::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+.pop-up-profile-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pop-up-profile-text {
+  white-space: normal;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 10px;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #efefef;
+  color: #2a564c;
+}
+
+.pop-up-profile-text p {
+  padding: 0px;
+  margin: 0px;
 }
 
 .close-pop-up {
@@ -203,11 +247,10 @@ div#cellBatchAttrPopUp {
 
 .info-header {
   text-align: center;
-}
-
-.info-header {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  margin-top: 5px;
+  color: #26a084;
 }
 
 .info-panel-body {
