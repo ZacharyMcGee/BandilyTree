@@ -143,6 +143,14 @@ div#cellBatchAttrPopUp {
   margin: 0px;
 }
 
+.pop-up-profile-text a:link {
+  color: #26a084;
+}
+
+.pop-up-profile-text a:visited {
+  color: #26a084;
+}
+
 .close-pop-up {
   display: inline-block;
   float: right;
