@@ -10,14 +10,6 @@ $(function(){
 });
 
 $(document).ready(function() {
-  $("pop-up-expand-button").click(function(params) {
-    params.event = "[original event]";
-    ExpandArtist(this.getNodeAt(params.pointer.DOM), 1, network);
-    console.log(
-      "click event, getNodeAt returns: " + this.getNodeAt(params.pointer.DOM)
-    );
-  });
-
     $("#artist-search-button").click(function(){
       var artist = $('#artist-search-input').val();
       $(".search-form").load("extra/loading-spinner.html", function(){
@@ -227,6 +219,7 @@ function GetArtistInfo(id, count, total, parent) {
  }
 }
 
+
 function BuildTree() {
   var network = null;
 
@@ -272,7 +265,8 @@ function BuildTree() {
                 var titleIcon;
                 console.log(this.body.nodes[nodeID].options);
 
-                var expandButton = "<div class='pop-up-expand-button' id='pop-up-expand-button'><input type='button' value='Expand in Tree'></div>";
+                var expandButton = "<div class='pop-up-expand-button' id='pop-up-expand-button'><input type='button' value='Expand Tree'></div>";
+
                 var sNodeLabel = this.body.nodes[nodeID].options.label;
                 var sToolTip = this.body.nodes[nodeID].options.title;
 
@@ -332,11 +326,16 @@ function BuildTree() {
                   $('.close-pop-up').click(function () {
                       $('#cellBatchAttrPopUp').empty().hide();
                   });
+
+                  $('.pop-up-expand-button').click(function () {
+                    ExpandArtist(nodeID, 1, network);
+                  });
             }
         });
 
     network.on("doubleClick", function(params) {
       params.event = "[original event]";
+      console.log(params.pointer.DOM);
       ExpandArtist(this.getNodeAt(params.pointer.DOM), 1, network);
       console.log(
         "click event, getNodeAt returns: " + this.getNodeAt(params.pointer.DOM)
