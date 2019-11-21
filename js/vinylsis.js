@@ -10,6 +10,14 @@ $(function(){
 });
 
 $(document).ready(function() {
+  $("pop-up-expand-button").click(function(params) {
+    params.event = "[original event]";
+    ExpandArtist(this.getNodeAt(params.pointer.DOM), 1, network);
+    console.log(
+      "click event, getNodeAt returns: " + this.getNodeAt(params.pointer.DOM)
+    );
+  });
+
     $("#artist-search-button").click(function(){
       var artist = $('#artist-search-input').val();
       $(".search-form").load("extra/loading-spinner.html", function(){
@@ -264,6 +272,7 @@ function BuildTree() {
                 var titleIcon;
                 console.log(this.body.nodes[nodeID].options);
 
+                var expandButton = "<div class='pop-up-expand-button' id='pop-up-expand-button'><input type='button' value='Expand in Tree'></div>";
                 var sNodeLabel = this.body.nodes[nodeID].options.label;
                 var sToolTip = this.body.nodes[nodeID].options.title;
 
@@ -286,9 +295,7 @@ function BuildTree() {
                     bioInformation = bioInformation.substring(0, MAX_BIO_LENGTH);
                     bioInformation = bioInformation + "... <a href='" + this.body.nodes[nodeID].options.data["uri"] + "'>Read More</a>";
                   }
-                  console.log(bioInformation);
                   bioInformation = bioInformation.replaceAll("[a=", "");
-                  console.log(bioInformation);
                   bioInformation = bioInformation.replaceAll("[l=", "");
                   bioInformation = bioInformation.replaceAll("]", "");
                   profileText = '<div class="info-header">' + sNodeLabel + '</div><div class="pop-up-profile-text"><p>' + bioInformation + '</p></div>'
@@ -318,6 +325,7 @@ function BuildTree() {
                   .append('<div class="pop-up-bio">' + profileImage + '</div>')
                   .append(profileText)
                   .append(sToolTip)
+                  .append(expandButton)
                   .css('top', 62).css('left', 0)
                   .show();
 
