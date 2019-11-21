@@ -151,6 +151,24 @@ div#cellBatchAttrPopUp {
   color: #26a084;
 }
 
+.pop-up-expand-button input {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: #26a084;
+  color: #e5fff3;
+  width: 180px;
+  margin-left: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.pop-up-expand-button input:hover {
+  background-color: #30b596;
+}
+
 .close-pop-up {
   display: inline-block;
   float: right;
