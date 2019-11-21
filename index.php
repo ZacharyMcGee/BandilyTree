@@ -4,6 +4,8 @@ header('Access-Control-Allow-Origin: *');
 <!doctype html>
 <html>
 <head>
+  <title>BandilyTree - Explore Musical Artists</title>
+
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
