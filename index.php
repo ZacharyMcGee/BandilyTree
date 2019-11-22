@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 <!doctype html>
 <html>
 <head>
-  <title>BandilyTree - Explore Musical Artists</title>
+  <title>BandilyTree - Explore Musical Artist Family Trees</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script
